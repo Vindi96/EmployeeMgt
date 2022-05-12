@@ -29,11 +29,13 @@ namespace Employee_management
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form1));
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.progressBar = new System.Windows.Forms.ProgressBar();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.SuspendLayout();
             // 
@@ -61,6 +63,8 @@ namespace Employee_management
             // 
             // progressBar
             // 
+            this.progressBar.BackColor = System.Drawing.Color.Gainsboro;
+            this.progressBar.ForeColor = System.Drawing.Color.SteelBlue;
             this.progressBar.Location = new System.Drawing.Point(40, 166);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(435, 34);
@@ -77,6 +81,11 @@ namespace Employee_management
             this.pictureBox1.TabStop = false;
             this.pictureBox1.Click += new System.EventHandler(this.pictureBox1_Click);
             // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
@@ -90,6 +99,7 @@ namespace Employee_management
             this.Name = "Form1";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.Form1_Load);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -102,6 +112,7 @@ namespace Employee_management
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.ProgressBar progressBar;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer1;
     }
 }
 

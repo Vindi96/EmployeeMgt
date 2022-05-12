@@ -21,5 +21,25 @@ namespace Employee_management
         {
 
         }
+        int startPoint = 0;
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            startPoint += 1;
+            progressBar.Value = startPoint;
+            if(progressBar.Value == 100)
+            {
+                progressBar.Value = 0;
+                timer1.Stop();
+                this.Hide();
+                Login login = new Login();
+                login.Show();
+            }
+
+        }
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            timer1.Start();
+        }
     }
 }

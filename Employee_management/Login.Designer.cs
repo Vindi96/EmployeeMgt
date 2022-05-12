@@ -38,9 +38,9 @@ namespace Employee_management
             this.txt_pass = new System.Windows.Forms.TextBox();
             this.btn_login = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            this.picBox_close = new System.Windows.Forms.PictureBox();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_close)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -111,6 +111,7 @@ namespace Employee_management
             this.btn_login.TabIndex = 7;
             this.btn_login.Text = "Login";
             this.btn_login.UseVisualStyleBackColor = false;
+            this.btn_login.Click += new System.EventHandler(this.btn_login_Click);
             // 
             // button2
             // 
@@ -124,23 +125,24 @@ namespace Employee_management
             this.button2.Text = "Clear";
             this.button2.UseVisualStyleBackColor = false;
             // 
-            // pictureBox2
+            // picBox_close
             // 
-            this.pictureBox2.BackColor = System.Drawing.Color.SteelBlue;
-            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
-            this.pictureBox2.Location = new System.Drawing.Point(438, 2);
-            this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(31, 28);
-            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox2.TabIndex = 9;
-            this.pictureBox2.TabStop = false;
+            this.picBox_close.BackColor = System.Drawing.Color.SteelBlue;
+            this.picBox_close.Image = ((System.Drawing.Image)(resources.GetObject("picBox_close.Image")));
+            this.picBox_close.Location = new System.Drawing.Point(438, 2);
+            this.picBox_close.Name = "picBox_close";
+            this.picBox_close.Size = new System.Drawing.Size(31, 28);
+            this.picBox_close.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.picBox_close.TabIndex = 9;
+            this.picBox_close.TabStop = false;
+            this.picBox_close.Click += new System.EventHandler(this.picBox_close_Click);
             // 
             // Login
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(472, 261);
-            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.picBox_close);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.btn_login);
             this.Controls.Add(this.txt_pass);
@@ -153,7 +155,7 @@ namespace Employee_management
             this.Name = "Login";
             this.Text = "Login";
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picBox_close)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -169,6 +171,6 @@ namespace Employee_management
         private System.Windows.Forms.TextBox txt_pass;
         private System.Windows.Forms.Button btn_login;
         private System.Windows.Forms.Button button2;
-        private System.Windows.Forms.PictureBox pictureBox2;
+        private System.Windows.Forms.PictureBox picBox_close;
     }
 }

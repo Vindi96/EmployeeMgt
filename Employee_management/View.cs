@@ -75,5 +75,26 @@ namespace Employee_management
             fetchEmpData();
 
         }
+
+        private void btn_print_Click(object sender, EventArgs e)
+        {
+            if (printPreviewDialog1.ShowDialog() == DialogResult.OK)
+            {
+                printDocument1.Print();
+            }
+        }
+        private void printPreviewDialog1_Load(object sender, EventArgs e)
+        {
+
+        }
+        private void printDocument1_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString("=======EMPLOYEE SUMMARY=======",new Font("Century Gothic",20,FontStyle.Bold),Brushes.Red,new Point(180));
+            e.Graphics.DrawString("Employee ID: "+lbl_empID.Text+ "\t Employee Name: " + lbl_empName.Text, new Font("Century Gothic", 18, FontStyle.Regular), Brushes.Gray, new Point(10,100));            
+            e.Graphics.DrawString("Possition: "+lbl_empPos.Text+ "\t Gender: " + lbl_gen.Text, new Font("Century Gothic", 18, FontStyle.Regular), Brushes.Gray, new Point(10,140));            
+            e.Graphics.DrawString("Employee Address: "+lbl_empAdd.Text+ "\t Phone Number: " + lbl_phone.Text, new Font("Century Gothic", 18, FontStyle.Regular), Brushes.Gray, new Point(10,180));       
+            e.Graphics.DrawString("Employee Education: "+lbl_empEdu.Text+ "\t Date Of Birth: " + lbl_DBO.Text, new Font("Century Gothic", 18, FontStyle.Regular), Brushes.Gray, new Point(10,220));
+            e.Graphics.DrawString("=======EmpiSoft=======", new Font("Century Gothic", 20, FontStyle.Bold), Brushes.Red, new Point(180, 280));
+        }   
     }
 }
